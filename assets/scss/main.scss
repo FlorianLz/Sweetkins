@@ -1,1 +1,12 @@
-@import "components/header";
+//On importe les éléments globaux
+@import "common/normalize";
+@import "common/_global";
+@import "common/_variables";
+
+//On importe les autres éléments
+@import "elements/_header";
+@import "elements/_footer";
+@import "elements/_intro";
+@import "elements/_sweetkinsdesc";
+@import "elements/_jenveux";
+@import "elements/_petitplus";
