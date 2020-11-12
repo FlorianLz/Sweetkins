@@ -1,0 +1,99 @@
+.loader{
+    background-color: #fdf5e3;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out;
+    top:0;
+    left: 0;
+
+    &-fade{
+        opacity: 0;
+    }
+
+    &__logo{
+        height: auto;
+        display: flex;
+        position: absolute;
+        left: -80%;
+        transition: left 3s ease-in-out;
+
+        &--left{
+            left:13%;
+        }
+
+        &__image{
+            left: 87%;
+            top:40%;
+            transform: translateY(-50%);
+            position: absolute;
+            width: 400px;
+            transition: all 1s ease-in-out;
+            opacity: 1;
+            animation: apparition 2s;
+        }
+    }
+
+    &__logo{
+        background-color: #fdf5e3;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    &__text{
+        font-size: 130px;
+        margin-left: 40%;
+        font-family: "Bigger Lemon", sans-serif!important;
+        animation: zoomdezoom 1.5s ease-out;
+    }
+}
+
+.logo-rotate{
+    left: 87%;
+    top:50%;
+    transform: translateY(-50%) rotate(-70deg);
+    position: absolute;
+}
+
+
+@keyframes zoomdezoom {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1.0);
+    }
+}
+
+@keyframes apparition{
+    0%{
+        opacity: 0;    
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:500px){
+    .loader__logo__image{
+        top:37%;
+        width: 200px;
+        left:83%;
+    }
+    .loader__logo{
+        left: -80%;
+    }
+    .loader__logo--left{
+        left:10%;
+    }
+    .logo-rotate{
+        top:50%;
+    }
+    .loader__text{
+        font-size: 40px;
+        margin: 0 auto;
+    }
+}
