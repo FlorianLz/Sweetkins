@@ -5,6 +5,9 @@
     align-items: center;
     padding: 2rem 6rem;
     font-size: 2.2rem;
+    position:fixed;
+    width: 100%;
+    top: 0;
     overflow: hidden;
 
     &__nav{
