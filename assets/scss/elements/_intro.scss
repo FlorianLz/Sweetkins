@@ -3,22 +3,50 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 15rem;
+    padding: 0 0 0 15rem;
+
 
     &__infos{
+        position: relative;
         &__title{
+            position: relative;
             font-size: 4.3rem;
             font-weight: bold;
-            width: 70%;
+            z-index: 1;
         }
         &__button{
+            position: relative;
             margin-top: 7rem;
             font-size: 2.6rem;
             padding: 1rem 3rem;
             border: 3px solid $black;
             background-color: $beige;
-            width:50%;
+            width:85%;
             box-shadow: 4px 4px $orange;
+            cursor: pointer;
+            z-index:1;
+        }
+        img{
+            position: absolute;
+            width: 60%;
+            left: -30%;
+            bottom: -80%;
+            z-index:0;
+        }
+    }
+
+    &__illustration{
+        border: 1px solid red;
+        width:100%;
+        height:100%;
+        position: relative;
+
+        img{
+            position: absolute;
+            bottom: 0;
+            right:0;
+            z-index:0;
+            height: 82%;
         }
     }
 }
