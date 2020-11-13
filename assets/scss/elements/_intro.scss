@@ -1,5 +1,5 @@
 .intro{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -36,7 +36,6 @@
     }
 
     &__illustration{
-        border: 1px solid red;
         width:100%;
         height:100%;
         position: relative;
