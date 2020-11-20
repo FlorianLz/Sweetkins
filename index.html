@@ -10,15 +10,22 @@
 
     <header class="main-header">
 
-        <a href="index.html" class="main-header__logo">
+        <a id="main-header-logo" href="index.html" class="main-header__logo">
             <img src="./assets/img/logo_sweetkins.svg" alt="Logo de la marque de bonbons Sweetkins" />
         </a>
 
-        <nav class="main-header__nav">
+        <img id="main-nav-burger" class="hamburger-menu" src="./assets/img/menu-hamburger.svg" alt="Menu du site Sweet'kins" aria-controls="main-nav" aria-expanded="false"/>
+
+        <nav id="main-nav" class="main-header__nav">
             <a class="main-header__nav__item--active" href="index.html">Les bonbons</a>
             <a class="main-header__nav__item" href="creation.html">Créer mon paquet</a>
             <a class="main-header__nav__item" href="extras.html">Extras</a>
             <a class="main-header__nav__item" href="commande.html"><img src="./assets/img/panier.svg" alt="Panier de commande Sweetkins"></a>
+            <div class="main-header__nav__reseaux">
+                <a class="main-header__nav__item"><img src="./assets/img/logo-facebook.svg" alt="Facebook de la marque de bonbons Sweet'kins" /></a>
+                <a class="main-header__nav__item"><img src="./assets/img/logo-twitter.svg" alt="Twitter de la marque de bonbons Sweet'kins" /></a>
+                <a class="main-header__nav__item"><img src="./assets/img/logo-instagram.svg" alt="Instagram de la marque de bonbons Sweet'kins" /></a>
+            </div>
         </nav>
 
     </header>
@@ -142,6 +149,6 @@
 
 
     </div>
-    
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
