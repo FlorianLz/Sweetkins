@@ -29,3 +29,34 @@
         }
     }
 }
+.hamburger-menu{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+    .main-header{
+        display: flex;
+        flex-direction: column;
+        padding: 0.8rem 2rem;
+        &__logo{
+            width: 50%;
+            align-self: flex-start;
+            img{
+                width: 100%;
+            }
+        }
+        &__nav{
+            flex-direction: column;
+            overflow: hidden;
+            height: 0;
+        }
+    }
+    .hamburger-menu{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+    }
+}

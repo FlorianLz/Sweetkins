@@ -10,3 +10,16 @@ document.body.onload = function(e){
         }, 3000);
     }, 1500);
 }
+
+document.querySelector('#main-nav-burger').addEventListener('click', (e)=>{
+    const nav = document.querySelector('#main-nav');
+    const btn = e.currentTarget;
+    if(btn.getAttribute("aria-expanded") === "false"){
+        btn.setAttribute("aria-expanded", "true")
+        //nav.classList.add("is-active")
+    }
+    if(btn.getAttribute("aria-expanded") === "true"){
+        btn.setAttribute("aria-expanded", "false")
+        //nav.classList.remove("is-active")
+    }
+})
