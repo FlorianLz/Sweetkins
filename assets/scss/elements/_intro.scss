@@ -49,3 +49,29 @@
         }
     }
 }
+
+@media screen and (max-width:768px){
+    .intro{
+        padding: 0;
+        &__infos{
+            position: absolute;
+            text-align: center;
+            &__title{
+                font-size: 3.6rem;
+                padding: 0 1.2rem;
+            }
+        }
+        &__illustration{
+            background-image: url('../img/illustration_intro-mobile.png');
+            background-position: center;
+            background-size: cover;
+            opacity: 0.3;
+            img{
+                display: none;
+            }
+        }
+        &__infos img{
+             display: none;
+        }
+    }
+}
