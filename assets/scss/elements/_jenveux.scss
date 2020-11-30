@@ -4,7 +4,7 @@
     font-family: Helvetica;
     background-color: #FF7401;
     overflow: hidden;
-    h1{
+    h2{
         margin:0;
         font-size: 50px;
         color: #FF7401;
@@ -62,6 +62,10 @@
             }
             &__infos{
                 padding-bottom: 3rem;
+
+                button{
+                    width: 100%;
+                }
             }
         }
         &__araignee{
