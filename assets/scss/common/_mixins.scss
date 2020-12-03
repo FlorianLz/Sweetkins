@@ -1,0 +1,11 @@
+@mixin button($width,$fontsize) {
+    position: relative;
+    font-size: $fontsize;
+    padding: 1rem 3rem;
+    border: 3px solid $black;
+    background-color: $beige;
+    width:$width;
+    box-shadow: 4px 4px $orange;
+    cursor: pointer;
+    z-index:1;
+}

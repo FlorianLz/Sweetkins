@@ -1,0 +1,122 @@
+.composer{
+    padding-top: 8.5rem;
+    width: 80%;
+    margin: 0 auto;
+    >h1{
+        font-size: 4rem;
+        width: 55%;
+        margin: 0;
+        padding-bottom: 2rem;
+    }
+
+    &__content{
+        display: flex;
+        font-size: 1.7rem;
+
+        &__left{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__btn{
+        width: 50%;
+        display: flex;
+        input{
+            width: 40%;
+            text-align: center;
+            padding-left: 1.5rem;
+            border: 0;
+            border-top: 2px solid $black;
+            border-bottom: 2px solid $black;
+            background-color: transparent;
+        }
+        button{
+            width: 33%;
+            padding: 0.3rem;
+            cursor: pointer;
+            border: 0;
+            background-color: $orange;
+            border-top: 2px solid $black;
+            border-bottom: 2px solid $black;
+            &.composer__btn__dec{
+                border-left: 2px solid $black;
+                border-radius: 1rem 0 0 1rem;
+                background-color: #E9E2D1;
+            }
+            &.composer__btn__inc{
+                border-right: 2px solid $black;
+                border-radius: 0 1rem 1rem 0;
+            }
+        }
+    }
+}
+.bonbons{
+    &__composer{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        &__single{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            padding-bottom: 1.5rem;
+            >div{
+                width: 130px;
+                text-align: center;
+                img{
+                    width: 100%;
+                }
+            }
+            &.haut{
+                >div{
+                    width: 130px;
+                    img{
+                        height: 130px;
+                        width: auto;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    &__infos{
+        width: 50%;
+        text-align: center;
+        position: relative;
+        >p{
+            padding-bottom: 2rem;
+        }
+
+        &__souligne{
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        &__souligne::after{
+            content: "";
+            position: absolute;
+            width: 30%;
+            height: 2px;
+            left: 50%;
+            bottom: -0.3rem;
+            transform: translateX(-50%);
+            border-bottom: 2px solid $black;
+            z-index: -2;
+        }
+        .last::after{
+            width: 45%;
+        }
+
+        >p > span{
+            color: $orange;
+        }
+        button{
+            @include button(40%,1.7rem);
+        }
+    }
+}

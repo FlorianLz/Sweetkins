@@ -3,6 +3,7 @@
 @import "common/fonts";
 @import "common/_global";
 @import "common/_variables";
+@import "common/mixins";
 
 //On importe les autres éléments
 @import "elements/_header";
@@ -13,3 +14,4 @@
 @import "elements/_petitplus";
 @import "elements/loader";
 @import "elements/infos";
+@import "elements/composer";

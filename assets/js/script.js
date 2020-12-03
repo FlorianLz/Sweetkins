@@ -33,3 +33,38 @@ document.querySelector('#main-nav-burger').addEventListener('click', (e)=>{
     }
     
 })
+
+function inc(element) {
+    let el = document.querySelector(`[name="${element}"]`);
+    let nb = document.querySelector(`span[data-nb="${element}"]`);
+    el.value = parseInt(el.value) + 1;
+    if(el.value > 0){
+        document.querySelector(`button[data-tag="${element}"]`).style.background = '#FF7401';
+        nb.innerHTML = el.value;
+    }
+    majprix()
+}
+  
+function dec(element) {
+    let el = document.querySelector(`[name="${element}"]`);
+    let nb = document.querySelector(`span[data-nb="${element}"]`);
+    if (parseInt(el.value) > 0) {
+        el.value = parseInt(el.value) - 1;
+        nb.innerHTML = el.value;
+    }
+    if(el.value == 0){
+        document.querySelector(`button[data-tag="${element}"]`).style.background = "#E9E2D1";
+    }
+    majprix()
+}
+
+function majprix(){
+    let nbchauvesouris = parseInt(document.querySelector(`span[data-nb="chauve-souris"]`).innerHTML);
+    let nbfantome = document.querySelector(`span[data-nb="fantome"]`).innerHTML;
+    let nbaraignee = document.querySelector(`span[data-nb="araignee"]`).innerHTML;
+    let nbzombie = document.querySelector(`span[data-nb="zombie"]`).innerHTML;
+    let nbsquelette = document.querySelector(`span[data-nb="squelette"]`).innerHTML;
+
+    let total = (nbchauvesouris*0.05) + (nbfantome*0.07) + (nbaraignee*0.06) + (nbzombie*0.05) + (nbsquelette*0.12);
+    document.querySelector(`span[data-tag="total"]`).innerHTML = parseFloat(total).toFixed(2);
+}
