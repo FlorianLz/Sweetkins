@@ -7,20 +7,29 @@
     <title>Sweetkins - Créer son paquet</title>
 </head>
 <body>
-
+    <?php include('loader.php');?>
     <header class="main-header">
 
-        <a id="main-header-logo" href="index.html" class="main-header__logo">
+        <a id="main-header-logo" href="index.php" class="main-header__logo">
             <img src="./assets/img/logo_sweetkins.svg" alt="Logo de la marque de bonbons Sweetkins" />
         </a>
 
         <img id="main-nav-burger" class="hamburger-menu" src="./assets/img/menu-hamburger.svg" alt="Menu du site Sweet'kins" aria-controls="main-nav" aria-expanded="false"/>
 
         <nav id="main-nav" class="main-header__nav">
-            <a class="main-header__nav__item" href="index.html">Les bonbons</a>
-            <a class="main-header__nav__item--active" href="creation.html">Créer mon paquet</a>
-            <a class="main-header__nav__item" href="extras.html">Extras</a>
-            <a class="main-header__nav__item" href="commande.html"><img src="./assets/img/panier.svg" alt="Panier de commande Sweetkins"></a>
+            <a class="main-header__nav__item" href="index.php">Les bonbons</a>
+            <a class="main-header__nav__item--active" href="creation.php">Créer mon paquet</a>
+            <a class="main-header__nav__item" href="extras.php">Extras</a>
+            <a class="main-header__nav__item" href="commande.php">
+                <?php 
+                session_start();
+                if(isset($_SESSION['total']) && $_SESSION['total'] != 0.00){
+                    echo '<img src="./assets/img/panier.svg" alt="Panier de commande Sweetkins">';
+                }else{
+                    echo '<img src="./assets/img/paniervide.svg" alt="Panier de commande Sweetkins">';
+                }
+                ?>
+            </a>
             <div class="main-header__nav__reseaux">
                 <a class="main-header__nav__item"><img src="./assets/img/logo-facebook.svg" alt="Facebook de la marque de bonbons Sweet'kins" /></a>
                 <a class="main-header__nav__item"><img src="./assets/img/logo-twitter.svg" alt="Twitter de la marque de bonbons Sweet'kins" /></a>
@@ -97,7 +106,7 @@
                     <p><span data-nb='squelette'>0</span>x bonbon squelette</p>
                 </div>
                 <p>Total : <span data-tag="total">0.00</span>€</p>
-                <button>Ajouter au panier</button>
+                <button id="ajoutpanier" onclick="ajoutpanier();">Ajouter au panier</button>
             </div>
         </div>
     </div>

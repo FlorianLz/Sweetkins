@@ -7,20 +7,29 @@
     <title>Sweetkins - extras</title>
 </head>
 <body>
-
+    <?php include('loader.php');?>
     <header class="main-header">
 
-        <a id="main-header-logo" href="index.html" class="main-header__logo">
+        <a id="main-header-logo" href="index.php" class="main-header__logo">
             <img src="./assets/img/logo_sweetkins.svg" alt="Logo de la marque de bonbons Sweetkins" />
         </a>
 
         <img id="main-nav-burger" class="hamburger-menu" src="./assets/img/menu-hamburger.svg" alt="Menu du site Sweet'kins" aria-controls="main-nav" aria-expanded="false"/>
 
         <nav id="main-nav" class="main-header__nav">
-            <a class="main-header__nav__item" href="index.html">Les bonbons</a>
-            <a class="main-header__nav__item" href="creation.html">Créer mon paquet</a>
-            <a class="main-header__nav__item--active" href="extras.html">Extras</a>
-            <a class="main-header__nav__item" href="commande.html"><img src="./assets/img/panier.svg" alt="Panier de commande Sweetkins"></a>
+            <a class="main-header__nav__item" href="index.php">Les bonbons</a>
+            <a class="main-header__nav__item" href="creation.php">Créer mon paquet</a>
+            <a class="main-header__nav__item--active" href="extras.php">Extras</a>
+            <a class="main-header__nav__item" href="commande.php">
+                <?php 
+                session_start();
+                if(isset($_SESSION['total']) && $_SESSION['total'] != 0.00){
+                    echo '<img src="./assets/img/panier.svg" alt="Panier de commande Sweetkins">';
+                }else{
+                    echo '<img src="./assets/img/paniervide.svg" alt="Panier de commande Sweetkins">';
+                }
+                ?>
+            </a>
             <div class="main-header__nav__reseaux">
                 <a class="main-header__nav__item"><img src="./assets/img/logo-facebook.svg" alt="Facebook de la marque de bonbons Sweet'kins" /></a>
                 <a class="main-header__nav__item"><img src="./assets/img/logo-twitter.svg" alt="Twitter de la marque de bonbons Sweet'kins" /></a>
@@ -37,7 +46,7 @@
             <div class="extras__flyer__content">
                 <a href="./assets/img/flyer_sweetkins.png" target="_blank">
                     <img src="./assets/img/flyer_sweetkins_preview.png" alt="Flyer Sweet'kins" />
-                </a>
+            </a>
                 </div>
             <div class="extras__flyer__desc">
                 <p class="title">Flyer Sweet'kins</p>
@@ -54,28 +63,28 @@
             
             <div class="extras__coloriages__content extras__coloriage">
                 <div class="extras__coloriage__single">
-                    <a class="telecharger" href="./assets/img/coloriage_logo.jpg" target="_blank">Télécharger</a>
-                    <img src="./assets/img/coloriage_logo.jpg" alt="Coloriage du logo Sweet'kins" />
+                    <a class="telecharger" href="./assets/img/coloriage_logo.png" target="_blank">Télécharger</a>
+                    <img src="./assets/img/coloriage_logo_preview.jpg" alt="Coloriage du logo Sweet'kins" />
                 </div>
                 <div class="extras__coloriage__single">
-                    <a class="telecharger" href="./assets/img/coloriage_chauve-souris.jpg" target="_blank">Télécharger</a>
-                    <img src="./assets/img/coloriage_chauve-souris.jpg" alt="Coloriage du logo Sweet'kins" />
+                    <a class="telecharger" href="./assets/img/coloriage_chauve-souris.png" target="_blank">Télécharger</a>
+                    <img src="./assets/img/coloriage_chauve-souris_preview.jpg" alt="Coloriage du logo Sweet'kins" />
                 </div>
                 <div class="extras__coloriage__single">
-                    <a class="telecharger" href="./assets/img/coloriage_araignee.jpg" target="_blank">Télécharger</a>
-                    <img src="./assets/img/coloriage_araignee.jpg" alt="Coloriage du logo Sweet'kins" />
+                    <a class="telecharger" href="./assets/img/coloriage_araignee.png" target="_blank">Télécharger</a>
+                    <img src="./assets/img/coloriage_araignee_preview.jpg" alt="Coloriage du logo Sweet'kins" />
                 </div>
                 <div class="extras__coloriage__single">
                     <a class="telecharger" href="./assets/img/coloriage_fantome.png" target="_blank">Télécharger</a>
-                    <img src="./assets/img/coloriage_fantome.png" alt="Coloriage du logo Sweet'kins" />
+                    <img src="./assets/img/coloriage_fantome_preview.png" alt="Coloriage du logo Sweet'kins" />
                 </div>
                 <div class="extras__coloriage__single">
-                    <a class="telecharger" href="./assets/img/coloriage_squelette.jpg" target="_blank">Télécharger</a>
-                    <img src="./assets/img/coloriage_squelette.jpg" alt="Coloriage du logo Sweet'kins" />
+                    <a class="telecharger" href="./assets/img/coloriage_squelette.png" target="_blank">Télécharger</a>
+                    <img src="./assets/img/coloriage_squelette_preview.jpg" alt="Coloriage du logo Sweet'kins" />
                 </div>
                 <div class="extras__coloriage__single">
-                    <a class="telecharger" href="./assets/img/coloriage_zombie.jpg" target="_blank">Télécharger</a>
-                    <img src="./assets/img/coloriage_zombie.jpg" alt="Coloriage du logo Sweet'kins" />
+                    <a class="telecharger" href="./assets/img/coloriage_zombie.png" target="_blank">Télécharger</a>
+                    <img src="./assets/img/coloriage_zombie_preview.jpg" alt="Coloriage du logo Sweet'kins" />
                 </div>
             </div>
         </div>
