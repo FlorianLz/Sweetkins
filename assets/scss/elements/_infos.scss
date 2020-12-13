@@ -84,7 +84,6 @@
         &__desc{
             padding: 0 2rem;
             p{
-                font-size: 2rem;
                 text-align: justify;
                 width: 100%;
             }
@@ -102,17 +101,9 @@
         }
         .bonbon{
             flex-direction: column;
+            padding-bottom:2.5rem;
             &__infos{
-                padding: 0;
-                &__title{
-                    font-size: 2.4rem;
-                }
-                &__desc{
-                    font-size: 2rem;
-                }
-                &__gout{
-                    font-size: 1.8rem;
-                }
+                padding: 1.5rem 0 0 0;
             }
             &__infos--reverse{
                 padding: 0;

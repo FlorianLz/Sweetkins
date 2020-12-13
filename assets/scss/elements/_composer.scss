@@ -120,3 +120,54 @@
         }
     }
 }
+
+@media screen and (max-width:768px){
+    .composer{
+        h1{
+            width: 100%;
+            padding-top: 1rem;
+            font-size: 2.3rem;
+            text-align: center;
+        }
+        &__content{
+            flex-direction: column;
+            padding-bottom: 3rem;
+
+            &__left,&__right{
+                width: 100%;
+            }
+        }
+        &__btn input{
+            padding: 0;
+        }
+    }
+    .bonbons{
+        &__infos{
+            button{
+                width: 100%;
+            }
+        }
+        &__composer{
+            &__single{
+                justify-content: space-between;
+                height:9rem;
+                padding-bottom: 0;
+                &.haut{
+                    margin-bottom: 1rem;
+                    margin-top: 1rem;
+                }
+            }
+            &__single > div{
+                max-width: 9rem;
+            }
+            &__single.haut > div{
+                width: 9rem;
+                padding-bottom: 0;
+                img{
+                    height: 9rem;
+                }
+                
+            }
+        }
+    }
+}
