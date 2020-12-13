@@ -1,14 +1,19 @@
+body{
+    position: relative;
+    height: 100vh;
+}
 .loader{
     background-color: #fdf5e3;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     transition: opacity 1s ease-in-out;
     top:0;
     left: 0;
+    z-index:100;
 
     &-fade{
         opacity: 0;

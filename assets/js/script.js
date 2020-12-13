@@ -68,3 +68,35 @@ function majprix(){
     let total = (nbchauvesouris*0.05) + (nbfantome*0.07) + (nbaraignee*0.06) + (nbzombie*0.05) + (nbsquelette*0.12);
     document.querySelector(`span[data-tag="total"]`).innerHTML = parseFloat(total).toFixed(2);
 }
+
+
+function ajoutpanier(){
+    let nbchauvesouris = parseInt(document.querySelector(`span[data-nb="chauve-souris"]`).innerHTML);
+        let nbfantome = document.querySelector(`span[data-nb="fantome"]`).innerHTML;
+        let nbaraignee = document.querySelector(`span[data-nb="araignee"]`).innerHTML;
+        let nbzombie = document.querySelector(`span[data-nb="zombie"]`).innerHTML;
+        let nbsquelette = document.querySelector(`span[data-nb="squelette"]`).innerHTML;
+        let total = parseFloat((nbchauvesouris*0.05) + (nbfantome*0.07) + (nbaraignee*0.06) + (nbzombie*0.05) + (nbsquelette*0.12)).toFixed(2);
+        //console.log(total);
+    
+        let formData = new FormData();
+    
+        formData.append("nbchauvesouris", nbchauvesouris);
+        formData.append("nbfantome", nbfantome);
+        formData.append("nbaraignee", nbaraignee);
+        formData.append("nbzombie", nbzombie);
+        formData.append("nbsquelette", nbsquelette);
+        formData.append("total", total);
+    
+        let request = new XMLHttpRequest();
+        request.open("POST", "../ajoutpanier.php", true);
+        request.onload = function() {
+            if (request.status == 200) {
+                document.location.href= "commande.php";
+            }else {
+                console.log("erreur")
+            }
+        };
+    
+        request.send(formData);
+}
