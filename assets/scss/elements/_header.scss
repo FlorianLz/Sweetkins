@@ -78,14 +78,15 @@
             top:0;
             right: -100vw;
             transition: right 0.5s ease-in-out;
+            padding-top: 10rem;
             &__item{
-                padding: 3.5rem 0;
-                font-size: 2.5rem;
+                padding: 2.5rem 0;
+                font-size: 2rem;
                 margin-left: 0;
             }
             &__item--active{
                 margin:0;
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             &__reseaux{
                 border-top: 1rem solid $orange;
