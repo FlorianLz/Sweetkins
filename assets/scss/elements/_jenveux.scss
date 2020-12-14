@@ -48,6 +48,18 @@
         left:50%;
         transform: translateX(-50%);
         opacity: 0.2;
+        animation: hautbasj 5s infinite;
+    }
+    @keyframes hautbasj{
+        0%{
+            top: -470px;    
+        }
+        50%{
+            top: -175px;
+        }
+        100%{
+            top: -470px;
+        }
     }
 
     @media screen and (max-width:768px){
@@ -72,6 +84,18 @@
             width: 20%;
             top: -34px;
             left: 82%;
+            animation: hautbasmobile 5s infinite;
+        }
+        @keyframes hautbasmobile{
+            0%{
+                top: -34px;    
+            }
+            50%{
+                top: -150px;
+            }
+            100%{
+                top: -34px;
+            }
         }
     } 
 }

@@ -7,7 +7,6 @@
     <title>Sweetkins - Créer son paquet</title>
 </head>
 <body>
-    <?php include('loader.php');?>
     <header class="main-header">
 
         <a id="main-header-logo" href="index.php" class="main-header__logo">
@@ -39,6 +38,8 @@
     </header>
 
     <div class="composer">
+        <img class="composer__illua" src="./assets/img/toile_fond.png" alt="Illustration toile" />
+        <img class="composer__illub" src="./assets/img/araignee-fond.svg" alt="Illustration araignée" />
         <h1>Compose ton propre paquet de bonbons Sweetkins</h1>
         <div class="composer__content">
             <div class="composer__content__left bonbons__composer">
@@ -79,7 +80,8 @@
                     </div>
                 </div>
                 <div class="bonbons__composer__single haut">
-                    <div><img src="./assets/img/bonbon_squelette.png" alt="Bonbon squelette Sweetkins"></div>
+                    <div class="bonbon3D"><img class="vuenormale" src="./assets/img/bonbon_squelette3Dface.png" alt="Illustration du bonbon suqelette de Sweet'kins">
+                        <img class="vue3D" src="./assets/img/bonbon_squelette3D.png" alt="Illustration du bonbon suqelette de Sweet'kins"></div>
                     <p>0.12€</p>
                     <div class=composer__btn>
                         <button class="composer__btn__dec" data-tag="squelette" onclick="dec('squelette')">-</button>

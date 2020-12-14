@@ -1,6 +1,7 @@
 .infos{
     width:100%;
-
+    position: relative;
+    overflow: hidden;
     &__desc{
         padding-left: 3rem;
         &__title{
@@ -37,6 +38,29 @@
             padding-bottom: 5rem;
             justify-content: center;
         }
+    }
+
+    &__illua{
+        position: absolute;
+        width: 45vw;
+        top: 8%;
+        right: -36rem;
+        z-index: -1;
+    }
+    &__illub{
+        position: absolute;
+        width: 24vw;
+        bottom: 5rem;
+        left: -12vw;
+        z-index: -1;
+    }
+    &__illuc{
+        position: absolute;
+        width: 16vw;
+        bottom: 2rem;
+        right: 3vw;
+        z-index: -1;
+        transform: rotate(75deg);
     }
 }
 
@@ -114,5 +138,32 @@
                 height: auto;
             }
         }
+
+        &__illua{
+            width: 73vw;
+            top: 5%;
+            right: -112px;
+        }
+        &__illub{
+            width: 70vw;
+            bottom: 10rem;
+            left: -35vw;
+        }
+        &__illuc{
+            display: none;
+        }
+    }
+}
+
+.vue3D{
+    display: none;
+    margin: 0 auto;
+}
+.bonbon3D:hover{
+    .vue3D{
+        display: block;
+    }
+    .vuenormale{
+        display: none;
     }
 }

@@ -49,10 +49,11 @@ body{
     }
 
     &__text{
-        font-size: 130px;
         margin-left: 40%;
-        font-family: "Bigger Lemon", sans-serif!important;
         animation: zoomdezoom 1.5s ease-out;
+        img{
+            width: 100%;
+        }
     }
 }
 
@@ -98,7 +99,9 @@ body{
         top:50%;
     }
     .loader__text{
-        font-size: 40px;
-        margin: 0 auto;
+        margin-left:25%;
+        img{
+            width: 70%;
+        }
     }
 }

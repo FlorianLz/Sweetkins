@@ -21,17 +21,23 @@
             font-family: Helvetica;
             color: #333333;   
         }
-        button{
+        a{
+            width: 30%;
+        }
+        a button{
             font-size: 2rem;
             padding: 0.7rem 1.5rem;
             border: 3px solid #333333;
             background-color: #FDF5E3;
             box-shadow: 4px 4px #FF7401;
             cursor: pointer;
-            width: 30%;
+            width: 100%;
         }
         @media screen and (max-width:768px){
             flex-direction: column;
+            a{
+                width: 100%;
+            }
             button{
                 width: 100%;
                 margin-top: 3rem;
