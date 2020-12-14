@@ -7,7 +7,6 @@
     <title>Sweetkins - extras</title>
 </head>
 <body>
-    <?php include('loader.php');?>
     <header class="main-header">
 
         <a id="main-header-logo" href="index.php" class="main-header__logo">
@@ -40,6 +39,10 @@
     </header>
 
     <div class="extras">
+        <img class="extras__illua" src="./assets/img/toile_fond.png" alt="Illustration toile" />
+        <img class="extras__illub" src="./assets/img/araignee-fond.svg" alt="Illustration araignée" />
+        <img class="extras__illuc" src="./assets/img/toile_fond.png" alt="Illustration toile" />
+
         <h1>Retrouvez sur cette page des éléments permettant de faire découvrir Sweet’kins autour de vous et de vous amuser...</h1>
         
         <div class="extras__flyer">

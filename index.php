@@ -55,6 +55,9 @@
         </div>
 
         <div id="decouvrir" class="infos">
+            <img class="infos__illua" src="./assets/img/araignee-fond.svg" alt="Illustration araignée" />
+            <img class="infos__illub" src="./assets/img/toile_fond.png" alt="Illustration toile" />
+            <img class="infos__illuc" src="./assets/img/araignee-fond.svg" alt="Illustration araignée" />
             <div class="infos__desc">
                 <div class="infos__desc__title">
                     <h1>Sweet'kins ?</h1>
@@ -136,8 +139,9 @@
                 </div>
 
                 <div class="infos__bonbons__single bonbon">
-                    <div class="bonbon__img--portrait">
-                        <img src="./assets/img/bonbon_squelette.png" alt="Illustration du bonbon chauve-souris de Sweet'kins">
+                    <div class="bonbon__img--portrait bonbon3D">
+                        <img class="vuenormale" src="./assets/img/bonbon_squelette3Dface.png" alt="Illustration du bonbon suqelette de Sweet'kins">
+                        <img class="vue3D" src="./assets/img/bonbon_squelette3D.png" alt="Illustration du bonbon suqelette de Sweet'kins">
                     </div>
                     <div class="bonbon__infos">
                         <p class="bonbon__infos__title">
@@ -163,7 +167,7 @@
                 </div>
                 <div class="jenveux__contenu__infos">
                     <p>Compose ton propre paquet pour<br />choisir toi-même quels supers<br />pouvoirs tu veux obtenir ! </p>
-                    <button>C'est parti</button>
+                    <a href="./creation.php"><button>C'est parti</button></a>
                 </div>
             </div>
             <img class= "jenveux__araignee" src="./assets/img/araignee.png" alt="Illustration araignée Sweet'kins" />
@@ -175,7 +179,7 @@
                 <p>Viens vite découvrir les supers coloriages que nous t’avons préparés ! <br />
                     Tu pourras mettre en couleur les visuels de tes bonbons préférés !</p> 
         
-                <button class="page-extra">Découvrir les extras</button>
+                <a href="./extras.php"><button class="page-extra">Découvrir les extras</button></a>
             </div>
         </div>
 

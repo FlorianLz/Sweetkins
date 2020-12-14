@@ -1,7 +1,10 @@
 .composer{
-    padding-top: 8.5rem;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    min-height: calc(100vh - 17.15rem);
+    position: relative;
+    overflow: hidden;
+    padding: 8.5rem 10% 0 10%;
     >h1{
         font-size: 3rem;
         width: 35%;
@@ -50,6 +53,22 @@
                 border-radius: 0 1rem 1rem 0;
             }
         }
+    }
+
+    &__illua{
+        position: absolute;
+        width: 20vw;
+        top: 15%;
+        right: -10rem;
+        z-index: -1;
+    }
+    &__illub{
+        position: absolute;
+        width: 16vw;
+        bottom: -9rem;
+        left: 44%;
+        z-index: -1;
+        transform: rotate(75deg);
     }
 }
 .bonbons{
@@ -140,6 +159,18 @@
         }
         &__btn input{
             padding: 0;
+        }
+
+        &__illua{
+            width: 70vw;
+            top: 5%;
+            right: -35vw;
+        }
+        &__illub{
+            width: 50vw;
+            bottom: 5%;
+            left: -25vw;
+            transform: rotate(100deg);
         }
     }
     .bonbons{

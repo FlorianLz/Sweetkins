@@ -1,10 +1,12 @@
 .commande{
-    padding-top:12rem;
     font-size: 1.8rem;
     display: flex;
-    min-height: calc(100vh - 17.18rem);
-    width: 80%;
+    min-height: calc(100vh - 17.15rem);
+    width: 100%;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding: 12rem 10% 0 10%;
 
     &__bonbons__infos{
         width: 50%;
@@ -74,6 +76,45 @@
                 font-size: 1.8rem;
             }
         }
+
+        
+    }
+
+    &__illua{
+        position: absolute;
+        width: 10vw;
+        top: 0;
+        left: 39%;
+        z-index: -1;
+        opacity: 0.2;
+        animation: hautbas 5s infinite;
+    }
+    &__illub{
+        position: absolute;
+        width: 23vw;
+        bottom: -8vw;
+        right: -10rem;
+        z-index: -1;
+    }
+    &__illuc{
+        position: absolute;
+        width: 35vw;
+        bottom: -15vw;
+        left: -15vw;
+        z-index: -1;
+        transform: rotate(80deg);
+    }
+
+    @keyframes hautbas{
+        0%{
+            top: -235px;    
+        }
+        50%{
+            top: 0;
+        }
+        100%{
+            top: -235px;
+        }
     }
 
     @media screen and (max-width:768px){
@@ -99,6 +140,13 @@
                     }
                 }
             }
+        }
+        &__illub{
+            position: absolute;
+            width: 60vw;
+            top: 25vh;
+            right: -30vw;
+            z-index: -1;
         }
     }
 }

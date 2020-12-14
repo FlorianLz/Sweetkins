@@ -7,7 +7,6 @@
     <title>Sweetkins - Commande</title>
 </head>
 <body>
-    <?php include('loader.php');?>
     <header class="main-header">
 
         <a id="main-header-logo" href="index.php" class="main-header__logo">
@@ -40,6 +39,9 @@
     </header>
 
     <div class="commande">
+        <img class="commande__illua" src="./assets/img/araignee.png" alt="Illustration araignée" />
+        <img class="commande__illub" src="./assets/img/toile_fond.png" alt="Illustration toile" />
+        <img class="commande__illuc" src="./assets/img/araignee-fond.svg" alt="Illustration araignée" />
         <?php
         if(isset($_SESSION['total'])){?>
         <div class="commande__bonbons__infos">
